@@ -8,8 +8,12 @@ Built using React.js and Material UI.
 
 Wireframe of homepage
 
-![Homepage wireframe](./assets/pictures/Recycled%20Site.png)
+![Homepage wireframe](./src/assets/pictures/Recycled%20Site.png)
 
 Wireframe of team page
 
-![Team page Wireframe](./assets/pictures/recycled-team-page.png)
+![Team page Wireframe](./src/assets/pictures/recycled-team-page.png)
+
+Using an API call to a google sheet, I should be able to display "news" stories and player "cards", and insert the data into the Google sheet via a connected Google Form.
+
+![sheets server workflow](./src/assets/pictures/sheets%20server%20workflow.png)
