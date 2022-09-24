@@ -3,6 +3,7 @@ import { Button, IconButton } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 // Add Grid items around all the buttons and icon to have a mobile friendly navbar
+// 	TODO: Turn center icon into a SpeedDial or something similar, with links to WCL, RIO, etc. */
 
 // // An attempt at creating a svg icon of the recycling symbol. Not sure why it's not working, will figure it out later.
 // function NavIcon(props) {
@@ -51,6 +52,7 @@ const Nav = () => {
 			{/* Icon between buttons to stretch the nav bar across the page more, and provide aesthetic */}
 			<IconButton>
 				{/* <NavIcon /> */}
+
 				<DeleteOutlineIcon fontSize="large" color="primary" />
 			</IconButton>
 			<Button size="large" value="theTeam" name="theTeam">

@@ -27,7 +27,13 @@ const ClassNeedsCard = () => {
 					Interested?
 				</Typography> */}
 				<Tooltip title="Apply here" placement="top">
-					<Button size="large" sx={{ m: "auto", width: "100%" }}>
+					<Button
+						size="large"
+						sx={{ m: "auto", width: "100%" }}
+						href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
+						target="_blank"
+						rel="noreferrer"
+					>
 						Interested?
 					</Button>
 				</Tooltip>
