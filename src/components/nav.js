@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, IconButton, SvgIcon } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 // Add Grid items around all the buttons and icon to have a mobile friendly navbar
