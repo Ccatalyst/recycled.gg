@@ -3,29 +3,24 @@ import { Link } from "react-router-dom";
 import NewsFeed from "../components/newsfeed";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Box } from "@mui/material";
+import ClassNeedsCard from "../components/classneedscard/classneedscard";
 
 const Home = () => {
 	return (
 		<Grid
-			maxWidth="lg"
+			maxWidth="xl"
 			container
-			columns={{ xs: 12 }}
+			columns={{ xs: 10 }}
 			sx={{
-				justifyContent: "space-between",
+				justifyContent: "center",
 				margin: "auto",
 			}}
 		>
-			<Grid item xs={10}>
+			<Grid item xs={8}>
 				<NewsFeed />
 			</Grid>
 			<Grid item xs={2}>
-				<Box
-					sx={{
-						height: 100,
-						width: 100,
-						backgroundColor: "blue",
-					}}
-				></Box>
+				<ClassNeedsCard />
 			</Grid>
 		</Grid>
 	);

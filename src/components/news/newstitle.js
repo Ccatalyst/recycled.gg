@@ -4,7 +4,7 @@ import "./news.css";
 const NewsTitle = () => {
 	return (
 		<Paper
-			elevation={3}
+			elevation={5}
 			component="header"
 			sx={{
 				pt: 1,

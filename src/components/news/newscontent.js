@@ -3,7 +3,7 @@ import { Box, Paper } from "@mui/material";
 const NewsContent = () => {
 	return (
 		<Paper
-			elevation={3}
+			elevation={5}
 			sx={{
 				minHeight: 150,
 				mr: 0.5,

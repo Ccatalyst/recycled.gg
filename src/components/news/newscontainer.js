@@ -9,17 +9,18 @@ const NewsContainer = () => {
 	return (
 		// Gives the paper effect on the whole container
 		<Paper
-			elevation={2}
+			elevation={1}
 			sx={{
-				my: 1,
+				mb: 2,
 				mx: 1,
+				textOverflow: "ellipsis",
 			}}
 		>
 			<Grid container col={{ xs: 12 }}>
-				<Grid item xs={3}>
+				<Grid item xs={2}>
 					<NewsThumbnail />
 				</Grid>
-				<Grid item xs={9}>
+				<Grid item xs={10}>
 					<Grid
 						item
 						xs={12}

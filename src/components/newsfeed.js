@@ -7,8 +7,7 @@ const NewsFeed = () => {
 			container
 			sx={{
 				alignItems: "center",
-				border: 1,
-				borderColor: "orange",
+
 				columns: { xs: 12 },
 			}}
 			maxWidth="lg"
