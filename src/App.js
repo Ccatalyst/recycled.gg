@@ -25,7 +25,6 @@ function App() {
               <Route path="/" element={<Home />}></Route>
             </Routes> */}
 					</Router>
-					<h1>Testing</h1>
 				</div>
 			</ThemeProvider>
 		</>

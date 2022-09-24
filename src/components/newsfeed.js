@@ -1,28 +1,45 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
-
+import NewsContainer from "./news/newscontainer";
 const NewsFeed = () => {
 	return (
 		<Grid
 			container
 			sx={{
-				margin: "auto",
 				alignItems: "center",
-				bgcolor: "warning",
 				border: 1,
+				borderColor: "orange",
+				columns: { xs: 12 },
 			}}
 			maxWidth="lg"
-			columns={{ xs: 2 }}
+			columns={{ xs: 12 }}
 		>
 			<Grid
 				item
 				sx={{
-					height: 100,
-					bgcolor: "orange",
+					bgcolor: "primary",
 				}}
-				sm={8}
+				sm={12}
 			>
-				<div>test</div>
+				<NewsContainer />
+			</Grid>
+			<Grid
+				item
+				sx={{
+					bgcolor: "primary",
+				}}
+				sm={12}
+			>
+				<NewsContainer />
+			</Grid>
+			<Grid
+				item
+				sx={{
+					bgcolor: "primary",
+				}}
+				sm={12}
+			>
+				<NewsContainer />
 			</Grid>
 		</Grid>
 	);
