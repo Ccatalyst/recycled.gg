@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NewsFeed from "../components/newsfeed";
 import Grid from "@mui/material/Unstable_Grid2";
-import { Box } from "@mui/material";
 import ClassNeedsCard from "../components/classneedscard/classneedscard";
 
 const Home = () => {

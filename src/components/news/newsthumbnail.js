@@ -1,7 +1,7 @@
 import React from "react";
 import "./news.css";
 import Container from "@mui/material/Container";
-import { Paper } from "@mui/material";
+
 const NewsThumbnail = () => {
 	return (
 		<Container
