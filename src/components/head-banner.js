@@ -11,26 +11,25 @@ const Banner = () => {
 			maxWidth="xl"
 			sx={{
 				m: "auto",
-				alignItems: "flex-end",
 			}}
 		>
 			<Grid
 				item
-				xs={0}
+				xs={12}
 				sm={12}
 				sx={{
 					backgroundImage: `url(${Image})`,
 					backgroundPosition: "center",
 					objectFit: "cover",
 					height: 400,
-					alignItems: "flex-end",
-					objectPosition: "15% 30%",
 					display: {
-						sm: "none",
+						xs: "none",
+						sm: "block",
 					},
 				}}
-			>
-				<Typography variant="h1" color="yellow" component="h1">
+			></Grid>
+			<Grid item xs={12}>
+				<Typography variant="h2" color="yellow" component="h1">
 					&lt;recycled&gt;
 				</Typography>
 			</Grid>
