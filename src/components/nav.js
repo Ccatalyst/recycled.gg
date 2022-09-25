@@ -1,7 +1,8 @@
 import React from "react";
-import { Button, IconButton } from "@mui/material";
+import { Button, IconButton, Tooltip } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
 // Add Grid items around all the buttons and icon to have a mobile friendly navbar
 // 	TODO: Turn center icon into a SpeedDial or something similar, with links to WCL, RIO, etc. */
 
@@ -28,6 +29,16 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 // }
 
 const Nav = () => {
+	const [open, setOpen] = React.useState(false);
+
+	const handleTooltipClose = () => {
+		setOpen(false);
+	};
+
+	const handleTooltipOpen = () => {
+		setOpen(true);
+	};
+
 	return (
 		<Grid
 			container
@@ -41,33 +52,57 @@ const Nav = () => {
 				borderBottom: 2,
 			}}
 		>
-			{/* TODO: Paper is here to see if the design looks better with elevation. Test more at some point */}
-			{/* <Paper elevation={2}></Paper> */}
-			<Button size="large" value="Home" name="Home">
-				Home
-			</Button>
-			<Button size="large" value="News" name="News">
-				News
-			</Button>
+			<Grid item>
+				<Button size="large" value="Home" name="Home">
+					Home
+				</Button>
+			</Grid>
+			<Grid item>
+				<Button size="large" value="News" name="News">
+					News
+				</Button>
+			</Grid>
 			{/* Icon between buttons to stretch the nav bar across the page more, and provide aesthetic */}
-			<IconButton>
-				{/* <NavIcon /> */}
+			<Grid item>
+				<ClickAwayListener onClickAway={handleTooltipClose}>
+					<div>
+						<Tooltip
+							PopperProps={{
+								disablePortal: true,
+							}}
+							onClose={handleTooltipClose}
+							open={open}
+							disableFocusListener
+							disableHoverListener
+							disableTouchListener
+							title="Outside Links"
+						>
+							<IconButton onClick={handleTooltipOpen}>
+								{/* <NavIcon /> */}
 
-				<DeleteOutlineIcon fontSize="large" color="primary" />
-			</IconButton>
-			<Button size="large" value="theTeam" name="theTeam">
-				The Team
-			</Button>
-			<Button
-				size="20%"
-				value="Apply"
-				name="Apply"
-				href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
-				target="_blank"
-				rel="noreferrer"
-			>
-				Apply
-			</Button>
+								<DeleteOutlineIcon fontSize="large" color="primary" />
+							</IconButton>
+						</Tooltip>
+					</div>
+				</ClickAwayListener>
+			</Grid>
+			<Grid item>
+				<Button size="large" value="theTeam" name="theTeam">
+					The Team
+				</Button>
+			</Grid>
+			<Grid item>
+				<Button
+					size="20%"
+					value="Apply"
+					name="Apply"
+					href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
+					target="_blank"
+					rel="noreferrer"
+				>
+					Apply
+				</Button>
+			</Grid>
 		</Grid>
 	);
 };

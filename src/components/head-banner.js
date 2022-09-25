@@ -1,19 +1,40 @@
 import React from "react";
-import Container from "@mui/material/Container";
+import { Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import "./component.css";
+import Image from "../assets/pictures/WoWScrnShot_051522_210632.jpg";
 // NOTE: Container component centers the content inside horizontally
 const Banner = () => {
 	return (
-		<Container
-			maxWidth="xlg"
+		<Grid
+			container
+			maxWidth="xl"
 			sx={{
-				px: 5,
+				m: "auto",
+				alignItems: "flex-end",
 			}}
 		>
-			<div className="bannerphoto">
-				<h1>&lt;recycled&gt;</h1>
-			</div>
-		</Container>
+			<Grid
+				item
+				xs={0}
+				sm={12}
+				sx={{
+					backgroundImage: `url(${Image})`,
+					backgroundPosition: "center",
+					objectFit: "cover",
+					height: 400,
+					alignItems: "flex-end",
+					objectPosition: "15% 30%",
+					display: {
+						sm: "none",
+					},
+				}}
+			>
+				<Typography variant="h1" color="yellow" component="h1">
+					&lt;recycled&gt;
+				</Typography>
+			</Grid>
+		</Grid>
 	);
 };
 
