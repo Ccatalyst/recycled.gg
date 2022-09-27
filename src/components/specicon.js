@@ -1,8 +1,10 @@
 import React from "react";
-import classIcons from "../assets/pictures/specsprite.webp";
+import classIcons from "../assets/pictures/actors.jpg";
 
 const SpecIcon = (props) => {
-	return <img className={props.specName} alt={props.spec} src={classIcons} />;
+	let className = `${props.spec} icon icon-rounded icon-sprite `;
+
+	return <img className={className} alt={props.spec} src={classIcons} />;
 };
 
 export default SpecIcon;

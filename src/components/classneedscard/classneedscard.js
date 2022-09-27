@@ -17,7 +17,7 @@ const ClassNeedsCard = () => {
 				</Typography>
 				<ClassNeedsTable />
 
-				<SpecIcon specName="warrior-protection" spec="Deathknight Blood" style={{ width: 20 }} />
+				<SpecIcon spec="warrior-protection" />
 			</CardContent>
 			<CardActions>
 				<Tooltip title="Apply here" placement="top">

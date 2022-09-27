@@ -70,17 +70,27 @@ const Nav = () => {
 								<>
 									<Tooltip title="Warcraft Logs">
 										<Link href="https://www.warcraftlogs.com/guild/id/596438" target="_blank" rel="noreferrer">
-											<img src={WCLLogo} alt=" Recycled Warcraft Logs" style={{ objectFit: "contain", width: 40, height: "auto", marginRight: 3 }} />
+											<img
+												src={WCLLogo}
+												alt=" Recycled Warcraft Logs"
+												style={{ objectFit: "contain", width: 40, height: "auto", marginRight: 3 }}
+												loading="lazy"
+											/>
 										</Link>
 									</Tooltip>
 									<Tooltip title="Raider.io">
 										<Link href="https://raider.io/guilds/us/zuljin/recycled" target="_blank" rel="noreferrer">
-											<img src={RIOLogo} alt=" Recycled Raider.io" style={{ objectFit: "contain", width: 40, height: "auto" }} />
+											<img src={RIOLogo} alt=" Recycled Raider.io" style={{ objectFit: "contain", width: 40, height: "auto" }} loading="lazy" />
 										</Link>
 									</Tooltip>
 									<Tooltip title="World of Warcraft guild page">
 										<Link href="https://worldofwarcraft.com/en-us/guild/us/zuljin/recycled" target="_blank" rel="noreferrer">
-											<img src={WOWLogo} alt=" Recycled World of Warcraft" style={{ objectFit: "contain", width: 40, height: "auto" }} />
+											<img
+												src={WOWLogo}
+												alt=" Recycled World of Warcraft"
+												style={{ objectFit: "contain", width: 40, height: "auto" }}
+												loading="lazy"
+											/>
 										</Link>
 									</Tooltip>
 								</>

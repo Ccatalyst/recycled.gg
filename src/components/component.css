@@ -1,252 +1,118 @@
-.deathknight-blood {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 0% 0%;
+.icon-sprite {
+	object-fit: cover;
+}
+.icon-rounded {
 	border-radius: 100%;
+}
+.icon {
+	width: calc(var(--size) * 1px);
+	height: calc(var(--size) * 1px);
+}
+.deathknight-blood {
+	object-position: calc(-1px * var(--size)) 0px;
 }
 .deathknight-frost {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 17% 0%;
-	border-radius: 100%;
+	object-position: calc(-2px * var(--size)) 0px;
 }
 .deathknight-unholy {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 0% 20%;
-	border-radius: 100%;
+	object-position: calc(-6px * var(--size)) 0px;
 }
 .demonhunter-havoc {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 17% 20%;
-	border-radius: 100%;
+	object-position: calc(-8px * var(--size)) 0px;
 }
 .demonhunter-vengance {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 33% 0%;
-	border-radius: 100%;
+	object-position: calc(-9px * var(--size)) 0px;
 }
 .druid-balance {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 33% 20%;
-	border-radius: 100%;
+	object-position: calc(-11px * var(--size)) 0px;
 }
 .druid-feral {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 0% 40%;
-	border-radius: 100%;
+	object-position: calc(-13px * var(--size)) 0px;
 }
 .druid-guardian {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 17% 40%;
-	border-radius: 100%;
+	object-position: calc(-14px * var(--size)) 0px;
 }
 .druid-restoration {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 33% 40%;
-	border-radius: 100%;
+	object-position: calc(-15px * var(--size)) 0px;
 }
 .hunter-beastmastery {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 50% 0%;
-	border-radius: 100%;
+	object-position: calc(-21px * var(--size)) 0px;
 }
 .hunter-marksman {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 50% 20%;
-	border-radius: 100%;
+	object-position: calc(-22px * var(--size)) 0px;
 }
 .hunter-survival {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 50% 40%;
-	border-radius: 100%;
+	object-position: calc(-24px * var(--size)) 0px;
 }
 .mage-arcane {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 0% 60%;
-	border-radius: 100%;
+	object-position: calc(-26px * var(--size)) 0px;
 }
 .mage-fire {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 17% 60%;
-	border-radius: 100%;
+	object-position: calc(-27px * var(--size)) 0px;
 }
 .mage-frost {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 33% 60%;
-	border-radius: 100%;
+	object-position: calc(-28px * var(--size)) 0px;
 }
 .monk-brewmaster {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 50% 60%;
-	border-radius: 100%;
+	object-position: calc(-31px * var(--size)) 0px;
 }
 .monk-mistweaver {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 67% 0%;
-	border-radius: 100%;
+	object-position: calc(-32px * var(--size)) 0px;
 }
 .monk-windwalker {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 67% 20%;
-	border-radius: 100%;
+	object-position: calc(-33px * var(--size)) 0px;
 }
 .paladin-holy {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 67% 40%;
-	border-radius: 100%;
+	object-position: calc(-36x * var(--size)) 0px;
 }
 .paladin-protection {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 67% 60%;
-	border-radius: 100%;
+	object-position: calc(-38px * var(--size)) 0px;
 }
 .paladin-retribution {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 0% 80%;
-	border-radius: 100%;
+	object-position: calc(-39px * var(--size)) 0px;
 }
 .priest-discipline {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 17% 80%;
-	border-radius: 100%;
+	object-position: calc(-42px * var(--size)) 0px;
 }
 .priest-holy {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 33% 80%;
-	border-radius: 100%;
+	object-position: calc(-44px * var(--size)) 0px;
 }
 .priest-shadow {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 50% 80%;
-	border-radius: 100%;
+	object-position: calc(-45px * var(--size)) 0px;
 }
 .rogue-assassination {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 84% 0%;
-	border-radius: 100%;
+	object-position: calc(-48px * var(--size)) 0px;
 }
 .rogue-outlaw {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 84% 20%;
-	border-radius: 100%;
+	object-position: calc(-51px * var(--size)) 0px;
 }
 .rogue-subtlety {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 84% 40%;
-	border-radius: 100%;
+	object-position: calc(-52px * var(--size)) 0px;
 }
 .shaman-elemental {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 84% 60%;
-	border-radius: 100%;
+	object-position: calc(-54px * var(--size)) 0px;
 }
 .shaman-enhancement {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 84% 80%;
-	border-radius: 100%;
+	object-position: calc(-55px * var(--size)) 0px;
 }
 .shaman-restoration {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 0% 100%;
-	border-radius: 100%;
+	object-position: calc(-56px * var(--size)) 0px;
 }
 .warlock-affliction {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 17% 100%;
-	border-radius: 100%;
+	object-position: calc(-60px * var(--size)) 0px;
 }
 .warlock-demonology {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 33% 100%;
-	border-radius: 100%;
+	object-position: calc(-61px * var(--size)) 0px;
 }
 .warlock-destruction {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 50% 100%;
-	border-radius: 100%;
+	object-position: calc(-62px * var(--size)) 0px;
 }
 .warrior-arms {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 67% 100%;
-	border-radius: 100%;
+	object-position: calc(-65px * var(--size)) 0px;
 }
 .warrior-fury {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 84% 100%;
-	border-radius: 100%;
+	object-position: calc(-67px * var(--size)) 0px;
 }
 .warrior-protection {
-	width: 4rem;
-	height: 4rem;
-	object-fit: none;
-	object-position: 100% 0%;
-	border-radius: 100%;
+	object-position: calc(-70px * var(--size)) 0px;
 }
