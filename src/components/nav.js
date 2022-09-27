@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, IconButton, Tooltip, Link, Typography } from "@mui/material";
+import { Button, IconButton, Tooltip, Link } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Logo from "../components/logo";
@@ -37,14 +37,20 @@ const Nav = () => {
 			}}
 		>
 			<Grid item>
-				<Button size="large" value="Home" name="Home">
-					Home
-				</Button>
+				<Tooltip title="Home" arrow>
+					<Button size="large" value="Home" name="Home">
+						Home
+					</Button>
+				</Tooltip>
 			</Grid>
 			<Grid item>
-				<Button size="large" value="News" name="News">
-					About
-				</Button>
+				<Tooltip title="Not yet implemented" arrow>
+					<span>
+						<Button size="large" value="News" name="News" disabled>
+							About
+						</Button>
+					</span>
+				</Tooltip>
 			</Grid>
 			{/* Icon between buttons to stretch the nav bar across the page more, and provide aesthetic */}
 			<Grid item>
@@ -62,25 +68,21 @@ const Nav = () => {
 							disableTouchListener
 							title={
 								<>
-									<Link href="https://www.warcraftlogs.com/guild/id/596438">
-										<img src={WCLLogo} alt=" Recycled Warcraft Logs" style={{ objectFit: "contain", width: 40, height: "auto" }} />
-									</Link>
-									<Link href="https://raider.io/guilds/us/zuljin/recycled">
-										<img src={RIOLogo} alt=" Recycled Raider.io" style={{ objectFit: "contain", width: 40, height: "auto" }} />
-									</Link>
-									<Link href="https://worldofwarcraft.com/en-us/guild/us/zuljin/recycled">
-										<img src={WOWLogo} alt=" Recycled World of Warcraft" style={{ objectFit: "contain", width: 40, height: "auto" }} />
-									</Link>
-									<br />
-									<Typography variant="captiontext" component="span" sx={{ pr: 1 }}>
-										WCL
-									</Typography>
-									<Typography variant="p" component="span" sx={{ pr: 1 }}>
-										Raider.io
-									</Typography>
-									<Typography variant="p" component="span">
-										WCL
-									</Typography>
+									<Tooltip title="Warcraft Logs">
+										<Link href="https://www.warcraftlogs.com/guild/id/596438" target="_blank" rel="noreferrer">
+											<img src={WCLLogo} alt=" Recycled Warcraft Logs" style={{ objectFit: "contain", width: 40, height: "auto", marginRight: 3 }} />
+										</Link>
+									</Tooltip>
+									<Tooltip title="Raider.io">
+										<Link href="https://raider.io/guilds/us/zuljin/recycled" target="_blank" rel="noreferrer">
+											<img src={RIOLogo} alt=" Recycled Raider.io" style={{ objectFit: "contain", width: 40, height: "auto" }} />
+										</Link>
+									</Tooltip>
+									<Tooltip title="World of Warcraft guild page">
+										<Link href="https://worldofwarcraft.com/en-us/guild/us/zuljin/recycled" target="_blank" rel="noreferrer">
+											<img src={WOWLogo} alt=" Recycled World of Warcraft" style={{ objectFit: "contain", width: 40, height: "auto" }} />
+										</Link>
+									</Tooltip>
 								</>
 							}
 						>
@@ -94,21 +96,27 @@ const Nav = () => {
 				</ClickAwayListener>
 			</Grid>
 			<Grid item>
-				<Button size="large" value="theTeam" name="Team">
-					Team
-				</Button>
+				<Tooltip title="Not yet implemented" arrow>
+					<span>
+						<Button size="large" value="The Team" name="Team" disabled>
+							Team
+						</Button>
+					</span>
+				</Tooltip>
 			</Grid>
 			<Grid item>
-				<Button
-					size="20%"
-					value="Apply"
-					name="Apply"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Apply
-				</Button>
+				<Tooltip title="Apply here" arrow>
+					<Button
+						size="20%"
+						value="Apply"
+						name="Apply"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Apply
+					</Button>
+				</Tooltip>
 			</Grid>
 		</Grid>
 	);

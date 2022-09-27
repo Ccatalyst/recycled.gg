@@ -16,7 +16,8 @@ const ClassNeedsCard = () => {
 					Current Raid Needs
 				</Typography>
 				<ClassNeedsTable />
-				<SpecIcon specName="deathknight-blood" spec="Deathknight Blood" style={{ width: 20 }} />
+
+				<SpecIcon specName="warrior-protection" spec="Deathknight Blood" style={{ width: 20 }} />
 			</CardContent>
 			<CardActions>
 				<Tooltip title="Apply here" placement="top">
