@@ -63,13 +63,13 @@ const Nav = () => {
 							title={
 								<>
 									<Link href="https://www.warcraftlogs.com/guild/id/596438">
-										<img src={WCLLogo} style={{ objectFit: "contain", width: 40, height: "auto" }} />
+										<img src={WCLLogo} alt=" Recycled Warcraft Logs" style={{ objectFit: "contain", width: 40, height: "auto" }} />
 									</Link>
 									<Link href="https://raider.io/guilds/us/zuljin/recycled">
-										<img src={RIOLogo} style={{ objectFit: "contain", width: 40, height: "auto" }} />
+										<img src={RIOLogo} alt=" Recycled Raider.io" style={{ objectFit: "contain", width: 40, height: "auto" }} />
 									</Link>
-									<Link href="https://www.wowprogress.com/guild/us/zul-jin/recycled">
-										<img src={WOWLogo} style={{ objectFit: "contain", width: 40, height: "auto" }} />
+									<Link href="https://worldofwarcraft.com/en-us/guild/us/zuljin/recycled">
+										<img src={WOWLogo} alt=" Recycled World of Warcraft" style={{ objectFit: "contain", width: 40, height: "auto" }} />
 									</Link>
 									<br />
 									<Typography variant="captiontext" component="span" sx={{ pr: 1 }}>
