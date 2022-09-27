@@ -1,8 +1,11 @@
 import React from "react";
-import { Button, IconButton, Tooltip } from "@mui/material";
+import { Button, IconButton, Tooltip, Link, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Logo from "../components/logo";
+import RIOLogo from "../assets/pictures/raiderio-white.svg";
+import WCLLogo from "../assets/pictures/wcl-logo.png";
+import WOWLogo from "../assets/pictures/wowlogo-white.png";
 // 	TODO: Turn center icon into a SpeedDial or something similar, with links to WCL, RIO, etc. */
 
 // This one is weird. I need to turn the nav bar into a fixed menu on the screen, which means transforming this Grid container into a Floating Action Button with the Nav inside of it. It's that or make the Nav fixed on the screen once you scroll past it
@@ -40,7 +43,7 @@ const Nav = () => {
 			</Grid>
 			<Grid item>
 				<Button size="large" value="News" name="News">
-					News
+					About
 				</Button>
 			</Grid>
 			{/* Icon between buttons to stretch the nav bar across the page more, and provide aesthetic */}
@@ -53,23 +56,46 @@ const Nav = () => {
 							}}
 							onClose={handleTooltipClose}
 							open={open}
+							arrow
 							disableFocusListener
 							disableHoverListener
 							disableTouchListener
-							title="Outside Links"
+							title={
+								<>
+									<Link href="https://www.warcraftlogs.com/guild/id/596438">
+										<img src={WCLLogo} style={{ objectFit: "contain", width: 40, height: "auto" }} />
+									</Link>
+									<Link href="https://raider.io/guilds/us/zuljin/recycled">
+										<img src={RIOLogo} style={{ objectFit: "contain", width: 40, height: "auto" }} />
+									</Link>
+									<Link href="https://www.wowprogress.com/guild/us/zul-jin/recycled">
+										<img src={WOWLogo} style={{ objectFit: "contain", width: 40, height: "auto" }} />
+									</Link>
+									<br />
+									<Typography variant="captiontext" component="span" sx={{ pr: 1 }}>
+										WCL
+									</Typography>
+									<Typography variant="p" component="span" sx={{ pr: 1 }}>
+										Raider.io
+									</Typography>
+									<Typography variant="p" component="span">
+										WCL
+									</Typography>
+								</>
+							}
 						>
 							<IconButton onClick={handleTooltipOpen}>
 								{/* <NavIcon /> */}
 
-								<DeleteOutlineIcon fontSize="large" color="primary" />
+								<Logo />
 							</IconButton>
 						</Tooltip>
 					</div>
 				</ClickAwayListener>
 			</Grid>
 			<Grid item>
-				<Button size="large" value="theTeam" name="theTeam">
-					The Team
+				<Button size="large" value="theTeam" name="Team">
+					Team
 				</Button>
 			</Grid>
 			<Grid item>

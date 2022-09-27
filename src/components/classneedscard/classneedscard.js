@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardContent, CardActions, Button, Typography, Tooltip } from "@mui/material";
 import ClassNeedsTable from "./classneedstable";
-
+import SpecIcon from "../specicon";
+import "../component.css";
 const ClassNeedsCard = () => {
 	return (
 		<Card>
@@ -15,17 +16,9 @@ const ClassNeedsCard = () => {
 					Current Raid Needs
 				</Typography>
 				<ClassNeedsTable />
+				<SpecIcon specName="deathknight-blood" spec="Deathknight Blood" style={{ width: 20 }} />
 			</CardContent>
 			<CardActions>
-				{/* <Typography
-					variant="h6"
-					component="p"
-					sx={{
-						m: "auto",
-					}}
-				>
-					Interested?
-				</Typography> */}
 				<Tooltip title="Apply here" placement="top">
 					<Button
 						size="large"

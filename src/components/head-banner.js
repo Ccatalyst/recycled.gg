@@ -3,7 +3,6 @@ import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import "./component.css";
 import Image from "../assets/pictures/WoWScrnShot_051522_210632.jpg";
-// NOTE: Container component centers the content inside horizontally
 const Banner = () => {
 	return (
 		<Grid
@@ -16,7 +15,6 @@ const Banner = () => {
 			<Grid
 				item
 				xs={12}
-				sm={12}
 				sx={{
 					backgroundImage: `url(${Image})`,
 					backgroundPosition: "center",
@@ -28,9 +26,15 @@ const Banner = () => {
 					},
 				}}
 			></Grid>
-			<Grid item xs={12}>
-				<Typography variant="h2" color="yellow" component="h1">
-					&lt;recycled&gt;
+			<Grid
+				container
+				xs={12}
+				sx={{
+					justifyContent: "center",
+				}}
+			>
+				<Typography variant="h2" color="lightblue" component="h1">
+					recycled
 				</Typography>
 			</Grid>
 		</Grid>

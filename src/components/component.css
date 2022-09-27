@@ -1,1 +1,61 @@
-
+.deathknight-blood {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 0% 0%;
+	border-radius: 50%;
+}
+.deathknight-frost {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 16.5% 0%;
+}
+.deathknight-unholy {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 0% 20%;
+}
+.demonhunter-havoc {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 16.5% 20%;
+}
+.demonhunter-vengance {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 33% 0%;
+}
+.druid-balance {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 33% 20%;
+}
+.druid-feral {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 0% 40%;
+}
+.druid-guardian {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 16.5% 40%;
+}
+.druid-restoration {
+	width: 4rem;
+	height: 4rem;
+	object-fit: none;
+	object-position: 33% 40%;
+}
+/* .hunter-beastmastery {
+}
+.hunter-beastmastery {
+}
+.hunter-beastmastery {
+} */
