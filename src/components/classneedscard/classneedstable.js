@@ -1,5 +1,6 @@
 import React from "react";
 import { Table, TableBody, TableContainer, TableHead, TableRow, Paper, styled } from "@mui/material";
+import SpecIcon from "../specicon";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 // this works for now, but including the classes and specs via icons that can be dulled if not needed would be better.
@@ -7,7 +8,7 @@ import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 // createData function and rows variable will need to be updated, and a toggle to indicate if it's needed or not somehow
 // row = {
 //     className: String,
-//     icon: String,
+//
 // 	specs: {
 //         spec1: {
 //             name: String,
@@ -45,23 +46,63 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 	},
 }));
 
-function createData(className, need) {
-	return { className, need };
+function createData(className, name1, need1, name2, need2, name3, need3, name4, need4) {
+	// className = className.toLowerCase().replace(/ /g, "-");
+	let icon1 = className.toLowerCase().replace(/ /g, "") + "-" + name1;
+	let icon2 = className.toLowerCase().replace(/ /g, "") + "-" + name2;
+	let icon3 = className.toLowerCase().replace(/ /g, "") + "-" + name3;
+	let icon4 = className.toLowerCase().replace(/ /g, "") + "-" + name4;
+	return {
+		className,
+		specs: [
+			{
+				name: name1,
+				need: need1,
+				icon: icon1,
+			},
+			{
+				name: name2,
+				need: need2,
+				icon: icon2,
+			},
+			{
+				name: name3,
+				need: need3,
+				icon: icon3,
+			},
+			{
+				name: name4,
+				need: need4,
+				icon: icon4,
+			},
+		],
+	};
 }
-
+console.log(createData("Death Knight", "blood", "low", "frost", "low", "unholy", "low"));
 const rows = [
-	createData("Death Knight", "DPS(low)"),
-	createData("Demon Hunter", "DPS(low) Tank(low)"),
-	createData("Druid", "DPSRanged(high) Tank(low)"),
-	createData("Hunter", "(low)"),
-	createData("Mage", "(low)"),
-	createData("Monk", "(low)"),
-	createData("Paladin", "(low)"),
-	createData("Priest", "DPS(med) Disc(high)"),
-	createData("Rogue", "(high)"),
-	createData("Shaman", "DPSRanged(med) Healer(high)"),
-	createData("Warlock", "(high)"),
-	createData("Warrior", "DPS(high)"),
+	createData("Death Knight", "blood", "low", "frost", "low", "unholy", "low"),
+
+	createData("Demon Hunter", "havoc", "low", "vengance", "low"),
+
+	createData("Druid", "balance", "medium", "feral", "low", "guardian", "none", "restoration", "medium"),
+
+	createData("Hunter", "beastmastery", "none", "marksman", "none", "survival", "none"),
+
+	createData("Mage", "arcane", "low", "fire", "medium", "frost", "low"),
+
+	createData("Monk", "brewmaster", "low", "mistweaver", "low", "windwalker", "high"),
+
+	createData("Paladin", "holy", "medium", "protection", "low", "retribution", "none"),
+
+	createData("Priest", "discipline", "high", "holy", "low", "shadow", "high"),
+
+	createData("Rogue", "assassination", "low", "outlaw", "low", "subtlety", "low"),
+
+	createData("Shaman", "elemental", "high", "enhancement", "low", "restoration", "medium"),
+
+	createData("Warlock", "demonology", "medium", "destruction", "medium", "affliction", "medium"),
+
+	createData("Warrior", "arms", "high", "fury", "high", "protection", "low"),
 ];
 
 const ClassNeedsTable = () => {
@@ -80,7 +121,18 @@ const ClassNeedsTable = () => {
 							<TableCell component="th" scope="row">
 								{row.className}
 							</TableCell>
-							<TableCell align="right">{row.need}</TableCell>
+							<TableCell align="right">
+								{row.specs
+									.filter(function (spec) {
+										if (spec.need == null) {
+											return false;
+										}
+										return true;
+									})
+									.map((specs) => (
+										<SpecIcon spec={specs.icon} key={specs.name} need={specs.need} ml={3} />
+									))}
+							</TableCell>
 						</StyledTableRow>
 					))}
 				</TableBody>

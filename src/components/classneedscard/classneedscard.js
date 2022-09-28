@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardActions, Button, Typography, Tooltip } from "@mui/material";
 import ClassNeedsTable from "./classneedstable";
-import SpecIcon from "../specicon";
 import "../component.css";
 const ClassNeedsCard = () => {
 	return (
@@ -16,8 +15,6 @@ const ClassNeedsCard = () => {
 					Current Raid Needs
 				</Typography>
 				<ClassNeedsTable />
-
-				<SpecIcon spec="warrior-protection" />
 			</CardContent>
 			<CardActions>
 				<Tooltip title="Apply here" placement="top">
