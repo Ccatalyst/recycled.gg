@@ -22,7 +22,7 @@ const Nav = () => {
 	const handleTooltipOpen = () => {
 		setOpen(true);
 	};
-
+	// TODO: terinary operator using mediaquery hook to display different menu for phone screens.
 	return (
 		<Grid
 			container
@@ -36,14 +36,16 @@ const Nav = () => {
 				borderBottom: 2,
 			}}
 		>
-			<Grid item>
+			<Grid item xs={6} sm="auto" flex>
 				<Tooltip title="Home" arrow>
-					<Button size="large" value="Home" name="Home">
-						Home
-					</Button>
+					<span>
+						<Button size="fill" value="Home" name="Home">
+							Home
+						</Button>
+					</span>
 				</Tooltip>
 			</Grid>
-			<Grid item>
+			<Grid item xs={6} sm="auto">
 				<Tooltip title="Not yet implemented" arrow>
 					<span>
 						<Button size="large" value="News" name="News" disabled>
@@ -53,7 +55,7 @@ const Nav = () => {
 				</Tooltip>
 			</Grid>
 			{/* Icon between buttons to stretch the nav bar across the page more, and provide aesthetic */}
-			<Grid item>
+			<Grid item xs={12} sm="auto">
 				<ClickAwayListener onClickAway={handleTooltipClose}>
 					<div>
 						<Tooltip
@@ -105,7 +107,7 @@ const Nav = () => {
 					</div>
 				</ClickAwayListener>
 			</Grid>
-			<Grid item>
+			<Grid item xs={6} sm="auto">
 				<Tooltip title="Not yet implemented" arrow>
 					<span>
 						<Button size="large" value="The Team" name="Team" disabled>
@@ -114,18 +116,20 @@ const Nav = () => {
 					</span>
 				</Tooltip>
 			</Grid>
-			<Grid item>
+			<Grid item xs={6} sm="auto">
 				<Tooltip title="Apply here" arrow>
-					<Button
-						size="20%"
-						value="Apply"
-						name="Apply"
-						href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
-						target="_blank"
-						rel="noreferrer"
-					>
-						Apply
-					</Button>
+					<span>
+						<Button
+							size="20%"
+							value="Apply"
+							name="Apply"
+							href="https://docs.google.com/forms/d/e/1FAIpQLSeZ0ntFKaEzTyz02NKS4pR5CbDoXLF-M0Sex7t4ztLjGLxkOQ/viewform"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Apply
+						</Button>
+					</span>
 				</Tooltip>
 			</Grid>
 		</Grid>

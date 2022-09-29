@@ -14,10 +14,10 @@ const Home = () => {
 				margin: "auto",
 			}}
 		>
-			<Grid item xs={8}>
+			<Grid item xs={10}>
 				<NewsFeed />
 			</Grid>
-			<Grid item xs={2}>
+			<Grid item xs={10}>
 				<ClassNeedsCard />
 			</Grid>
 		</Grid>
