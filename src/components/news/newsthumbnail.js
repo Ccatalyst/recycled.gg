@@ -1,22 +1,18 @@
 import React from "react";
 import "./news.css";
-import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 const NewsThumbnail = () => {
 	return (
-		<Container
+		<Box
+			component="img"
+			src="https://images.unsplash.com/photo-1508968419-73cca394e8aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+			alt="placeholder"
 			sx={{
-				pt: 6,
-				pb: 6,
-				pl: 0,
+				maxWidth: 1 / 1,
+				p: 1,
 			}}
-		>
-			<img
-				src="https://images.unsplash.com/photo-1508968419-73cca394e8aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-				alt="placeholder"
-				sx={{ width: 1 / 1, height: "auto" }}
-			/>
-		</Container>
+		></Box>
 	);
 };
 

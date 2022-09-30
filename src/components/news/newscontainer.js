@@ -17,10 +17,10 @@ const NewsContainer = () => {
 			}}
 		>
 			<Grid container col={{ xs: 12 }}>
-				<Grid item xs={2}>
+				<Grid item xs={12} lg={2} sx={{ my: "auto" }}>
 					<NewsThumbnail />
 				</Grid>
-				<Grid item xs={10}>
+				<Grid item xs={12} lg={10}>
 					<Grid
 						item
 						xs={12}

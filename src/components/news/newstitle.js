@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Link } from "@mui/material";
+import { Paper, Link, Typography } from "@mui/material";
 import "./news.css";
 const NewsTitle = () => {
 	return (
@@ -12,11 +12,11 @@ const NewsTitle = () => {
 				mt: 1.5,
 			}}
 		>
-			<h3>
+			<Typography variant="h6" noWrap="ellipsis" sx={{ ml: 1 }}>
 				<Link href="#" underline="none">
 					Methane gas overloads Northern Hemisphere
 				</Link>
-			</h3>
+			</Typography>
 		</Paper>
 	);
 };
