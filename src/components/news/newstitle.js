@@ -12,7 +12,7 @@ const NewsTitle = () => {
 				mt: 1.5,
 			}}
 		>
-			<Typography variant="h6" noWrap="ellipsis" sx={{ ml: 1 }}>
+			<Typography variant="h6" noWrap={true} sx={{ ml: 1 }}>
 				<Link href="#" underline="none">
 					Methane gas overloads Northern Hemisphere
 				</Link>
