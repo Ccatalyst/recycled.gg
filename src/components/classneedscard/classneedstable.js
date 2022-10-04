@@ -1,6 +1,6 @@
 import React from "react";
 import { Table, TableBody, TableContainer, TableHead, TableRow, Paper, styled } from "@mui/material";
-import SpecIcon from "../specicon";
+import SpecIcon from "./specicon";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 // this works for now, but including the classes and specs via icons that can be dulled if not needed would be better.
@@ -162,7 +162,7 @@ const ClassNeedsTable = () => {
 								<TableCell align="right">
 									{row.specs
 										.filter(function (spec) {
-											if (spec.need === undefined || spec.need === "none") {
+											if (spec.need === "none") {
 												return false;
 											}
 											return true;
