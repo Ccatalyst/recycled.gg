@@ -7,6 +7,7 @@ h3 {
 	margin: 0;
 	display: inline;
 }
+/* Currently affecting the class needs card. Change to the newscontent Typography */
 p {
 	text-align: left;
 	padding-left: 0.5rem;

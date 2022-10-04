@@ -8,6 +8,7 @@
 	width: calc(var(--size) * 1px);
 	height: calc(var(--size) * 1px);
 }
+
 .deathknight-blood {
 	object-position: calc(-1px * var(--size)) 0px;
 }

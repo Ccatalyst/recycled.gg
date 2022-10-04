@@ -17,7 +17,7 @@ const Home = () => {
 			<Grid item xs={10} md={7}>
 				<NewsFeed />
 			</Grid>
-			<Grid item xs={8} md={3}>
+			<Grid item xs={9} md={3}>
 				<ClassNeedsCard />
 			</Grid>
 		</Grid>

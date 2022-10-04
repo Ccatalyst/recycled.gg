@@ -15,6 +15,7 @@ const Nav = () => {
 	};
 	// Sets the links in the mobile version of the navigation bar
 	const actions = [
+		// Find icons for each of the in-site pages, change main speeddial button to home.
 		{
 			icon: (
 				<Link
@@ -64,6 +65,51 @@ const Nav = () => {
 				</Link>
 			),
 			name: "WoW",
+		},
+		{
+			icon: (
+				<Link
+					href="/team"
+					target="_blank"
+					rel="noreferrer"
+					sx={{
+						mt: 1,
+					}}
+				>
+					T
+				</Link>
+			),
+			name: "The Team",
+		},
+		{
+			icon: (
+				<Link
+					to="/aboutus"
+					target="_blank"
+					rel="noreferrer"
+					sx={{
+						mt: 1,
+					}}
+				>
+					A
+				</Link>
+			),
+			name: "About Us",
+		},
+		{
+			icon: (
+				<Link
+					href="#"
+					target="_blank"
+					rel="noreferrer"
+					sx={{
+						mt: 1,
+					}}
+				>
+					Apply
+				</Link>
+			),
+			name: "Apply",
 		},
 	];
 	const handleTooltipOpen = () => {
@@ -173,8 +219,6 @@ const Nav = () => {
 									}
 								>
 									<IconButton onClick={handleTooltipOpen}>
-										{/* <NavIcon /> */}
-
 										<Logo />
 									</IconButton>
 								</Tooltip>

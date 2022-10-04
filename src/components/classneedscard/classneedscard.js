@@ -1,5 +1,7 @@
 import React from "react";
-import { Card, CardContent, CardActions, Button, Typography, Tooltip } from "@mui/material";
+import { Card, CardContent, CardActions, Button, Typography, Tooltip, Box } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+
 import ClassNeedsTable from "./classneedstable";
 import "../component.css";
 const ClassNeedsCard = () => {
@@ -8,9 +10,11 @@ const ClassNeedsCard = () => {
 			<CardContent>
 				<Typography
 					variant="h5"
+					component="h2"
 					sx={{
 						pb: 1,
 					}}
+					align="center"
 				>
 					Current Raid Needs
 				</Typography>

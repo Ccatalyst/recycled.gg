@@ -27,6 +27,7 @@ import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 //         },
 // 	},
 // };
+// Sets header cells to be black
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 	[`&.${tableCellClasses.head}`]: {
 		backgroundColor: theme.palette.common.black,
@@ -36,6 +37,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 		fontSize: 14,
 	},
 }));
+// Alters every other row to have slightly different color
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
 	"&:nth-of-type(odd)": {
 		backgroundColor: theme.palette.action.hover,
@@ -45,67 +47,101 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 		border: 0,
 	},
 }));
+// Creates data and returns it in an object for use in the class needs table.
 
-function createData(className, name1, need1, name2, need2, name3, need3, name4, need4) {
-	// className = className.toLowerCase().replace(/ /g, "-");
-	let icon1 = className.toLowerCase().replace(/ /g, "") + "-" + name1;
-	let icon2 = className.toLowerCase().replace(/ /g, "") + "-" + name2;
-	let icon3 = className.toLowerCase().replace(/ /g, "") + "-" + name3;
-	let icon4 = className.toLowerCase().replace(/ /g, "") + "-" + name4;
+function createData(className, needs) {
+	let classNeed = false;
+	let specNeeds = needs.map((need) => {
+		need.icon = className.toLowerCase().replace(/ /g, "") + "-" + need.name;
+		if (need.need !== "none") {
+			classNeed = true;
+		}
+		return need;
+	});
+
 	return {
 		className,
-		specs: [
-			{
-				name: name1,
-				need: need1,
-				icon: icon1,
-			},
-			{
-				name: name2,
-				need: need2,
-				icon: icon2,
-			},
-			{
-				name: name3,
-				need: need3,
-				icon: icon3,
-			},
-			{
-				name: name4,
-				need: need4,
-				icon: icon4,
-			},
-		],
+		specs: specNeeds,
+		need: classNeed,
 	};
 }
-console.log(createData("Death Knight", "blood", "low", "frost", "low", "unholy", "low"));
+// the data for each class as it's rendered on the page. If a need changes, it can be changed here.
 const rows = [
-	createData("Death Knight", "blood", "low", "frost", "low", "unholy", "low"),
+	createData("Death Knight", [
+		{ name: "blood", need: "none" },
+		{ name: "frost", need: "low" },
+		{ name: "unholy", need: "low" },
+	]),
 
-	createData("Demon Hunter", "havoc", "low", "vengance", "low"),
+	createData("Demon Hunter", [
+		{ name: "havoc", need: "none" },
+		{ name: "vengance", need: "low" },
+	]),
 
-	createData("Druid", "balance", "medium", "feral", "low", "guardian", "none", "restoration", "medium"),
+	createData("Druid", [
+		{ name: "balance", need: "high" },
+		{ name: "feral", need: "none" },
+		{ name: "guardian", need: "medium" },
+		{ name: "restoration", need: "low" },
+	]),
 
-	createData("Hunter", "beastmastery", "none", "marksman", "none", "survival", "none"),
+	createData("Hunter", [
+		{ name: "beastmastery", need: "none" },
+		{ name: "marksman", need: "none" },
+		{ name: "survival", need: "none" },
+	]),
 
-	createData("Mage", "arcane", "low", "fire", "medium", "frost", "low"),
+	createData("Mage", [
+		{ name: "arcane", need: "none" },
+		{ name: "fire", need: "none" },
+		{ name: "frost", need: "none" },
+	]),
 
-	createData("Monk", "brewmaster", "low", "mistweaver", "low", "windwalker", "high"),
+	createData("Monk", [
+		{ name: "brewmaster", need: "high" },
+		{ name: "mistweaver", need: "low" },
+		{ name: "windwalker", need: "medium" },
+	]),
 
-	createData("Paladin", "holy", "medium", "protection", "low", "retribution", "none"),
+	createData("Paladin", [
+		{ name: "holy", need: "high" },
+		{ name: "protection", need: "high" },
+		{ name: "retribution", need: "none" },
+	]),
 
-	createData("Priest", "discipline", "high", "holy", "low", "shadow", "high"),
+	createData("Priest", [
+		{ name: "discipline", need: "high" },
+		{ name: "holy", need: "low" },
+		{ name: "shadow", need: "high" },
+	]),
 
-	createData("Rogue", "assassination", "low", "outlaw", "low", "subtlety", "low"),
+	createData("Rogue", [
+		{ name: "assassination", need: "high" },
+		{ name: "outlaw", need: "high" },
+		{ name: "subtlety", need: "high" },
+	]),
 
-	createData("Shaman", "elemental", "high", "enhancement", "low", "restoration", "medium"),
+	createData("Shaman", [
+		{ name: "elemental", need: "high" },
+		{ name: "enhancement", need: "medium" },
+		{ name: "restoration", need: "high" },
+	]),
 
-	createData("Warlock", "demonology", "medium", "destruction", "medium", "affliction", "medium"),
+	createData("Warlock", [
+		{ name: "demonology", need: "low" },
+		{ name: "destruction", need: "low" },
+		{ name: "affliction", need: "low" },
+	]),
 
-	createData("Warrior", "arms", "high", "fury", "high", "protection", "low"),
+	createData("Warrior", [
+		{ name: "arms", need: "high" },
+		{ name: "fury", need: "high" },
+		{ name: "protection", need: "medium" },
+	]),
 ];
 
 const ClassNeedsTable = () => {
+	console.log(rows[0]);
 	return (
 		<TableContainer component={Paper}>
 			<Table size="small" aria-label="simple table">
@@ -116,25 +152,27 @@ const ClassNeedsTable = () => {
 					</TableRow>
 				</TableHead>
 				<TableBody>
-					{rows.map((row) => (
-						<StyledTableRow key={row.className} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-							<TableCell component="th" scope="row">
-								{row.className}
-							</TableCell>
-							<TableCell align="right">
-								{row.specs
-									.filter(function (spec) {
-										if (spec.need == null) {
-											return false;
-										}
-										return true;
-									})
-									.map((specs) => (
-										<SpecIcon spec={specs.icon} key={specs.name} need={specs.need} ml={3} />
-									))}
-							</TableCell>
-						</StyledTableRow>
-					))}
+					{rows
+						.filter((row) => row.need)
+						.map((row) => (
+							<StyledTableRow key={row.className} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+								<TableCell component="th" scope="row">
+									{row.className}
+								</TableCell>
+								<TableCell align="right">
+									{row.specs
+										.filter(function (spec) {
+											if (spec.need === undefined || spec.need === "none") {
+												return false;
+											}
+											return true;
+										})
+										.map((specs) => (
+											<SpecIcon spec={specs.icon} key={specs.name} need={specs.need} ml={3} />
+										))}
+								</TableCell>
+							</StyledTableRow>
+						))}
 				</TableBody>
 			</Table>
 		</TableContainer>
