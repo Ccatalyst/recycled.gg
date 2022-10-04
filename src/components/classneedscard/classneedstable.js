@@ -141,7 +141,6 @@ const rows = [
 ];
 
 const ClassNeedsTable = () => {
-	console.log(rows[0]);
 	return (
 		<TableContainer component={Paper}>
 			<Table size="small" aria-label="simple table">

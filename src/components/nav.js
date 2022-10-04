@@ -6,16 +6,64 @@ import Logo from "../components/logo";
 import RIOLogo from "../assets/pictures/raiderio-white.svg";
 import WCLLogo from "../assets/pictures/wcl-logo.png";
 import WOWLogo from "../assets/pictures/wowlogo-white.png";
+import { HistoryEdu, Home, Groups2, ContactPage } from "@mui/icons-material/";
 
 const Nav = () => {
 	const [open, setOpen] = React.useState(false);
-
+	const handleOpen = () => setOpen(true);
+	const handleClose = () => setOpen(false);
 	const handleTooltipClose = () => {
 		setOpen(false);
+	};
+	const handleTooltipOpen = () => {
+		setOpen(true);
 	};
 	// Sets the links in the mobile version of the navigation bar
 	const actions = [
 		// Find icons for each of the in-site pages, change main speeddial button to home.
+		{
+			icon: (
+				<Link
+					href="/"
+					rel="noreferrer"
+					sx={{
+						mt: 1,
+					}}
+				>
+					<Home />
+				</Link>
+			),
+			name: "Home",
+		},
+		{
+			icon: (
+				<Link
+					href="/team"
+					rel="noreferrer"
+					sx={{
+						mt: 1,
+					}}
+				>
+					<Groups2 />
+				</Link>
+			),
+			name: "Team",
+		},
+		{
+			icon: (
+				<Link
+					to="/aboutus"
+					rel="noreferrer"
+					sx={{
+						mt: 1,
+					}}
+				>
+					<HistoryEdu />
+				</Link>
+			),
+			name: "About",
+		},
+
 		{
 			icon: (
 				<Link
@@ -69,52 +117,18 @@ const Nav = () => {
 		{
 			icon: (
 				<Link
-					href="/team"
-					target="_blank"
-					rel="noreferrer"
-					sx={{
-						mt: 1,
-					}}
-				>
-					T
-				</Link>
-			),
-			name: "The Team",
-		},
-		{
-			icon: (
-				<Link
-					to="/aboutus"
-					target="_blank"
-					rel="noreferrer"
-					sx={{
-						mt: 1,
-					}}
-				>
-					A
-				</Link>
-			),
-			name: "About Us",
-		},
-		{
-			icon: (
-				<Link
 					href="#"
-					target="_blank"
 					rel="noreferrer"
 					sx={{
 						mt: 1,
 					}}
 				>
-					Apply
+					<ContactPage />
 				</Link>
 			),
 			name: "Apply",
 		},
 	];
-	const handleTooltipOpen = () => {
-		setOpen(true);
-	};
 	const theme = useTheme();
 	// Checks to see if the screen size is less than the "sm" breakpoint of Material UI.
 	const mobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -124,7 +138,6 @@ const Nav = () => {
 			{mobile ? (
 				<Box>
 					<SpeedDial
-						background-color="palette.background.default"
 						size="small"
 						FabProps={{
 							sx: {
@@ -137,9 +150,12 @@ const Nav = () => {
 						ariaLabel="Navigation"
 						sx={{ position: "fixed", bottom: 16, right: 16 }}
 						icon={<Logo />}
+						onOpen={handleOpen}
+						onClose={handleClose}
+						open={open}
 					>
 						{actions.map((action) => (
-							<SpeedDialAction key={action.name} icon={action.icon} tooltipTitle={action.name} />
+							<SpeedDialAction key={action.name} icon={action.icon} tooltipTitle={action.name} tooltipOpen onClick={handleClose} />
 						))}
 					</SpeedDial>
 				</Box>
