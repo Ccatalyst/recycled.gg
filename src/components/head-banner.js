@@ -33,7 +33,7 @@ const Banner = () => {
 					justifyContent: "center",
 				}}
 			>
-				<Typography variant="h2" color="lightblue" component="h1">
+				<Typography variant="h2" color="primary.main" component="h1">
 					recycled
 				</Typography>
 			</Grid>

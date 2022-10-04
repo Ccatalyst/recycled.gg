@@ -8,6 +8,9 @@ import Home from "./pages/home";
 const darkTheme = createTheme({
 	palette: {
 		mode: "dark",
+		primary: {
+			main: "#ffb74d",
+		},
 	},
 });
 function App() {

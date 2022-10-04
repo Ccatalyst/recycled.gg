@@ -14,6 +14,7 @@ const ClassNeedsCard = () => {
 						pb: 1,
 					}}
 					align="center"
+					color="primary.main"
 				>
 					Current Raid Needs
 				</Typography>
