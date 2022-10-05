@@ -1,3 +1,16 @@
+.banner-logo-main {
+	height: 140px;
+	width: 400px;
+	object-fit: cover;
+	object-position: 100% 53%;
+	margin-top: 250px;
+}
+.banner-logo-mobile {
+	max-height: 10vh;
+	max-width: 50vh;
+	object-fit: cover;
+}
+
 .icon-sprite {
 	object-fit: cover;
 }
