@@ -39,7 +39,7 @@ const Banner = () => {
 				</Grid>
 			) : (
 				<Grid container>
-					<Grid item sx={12}>
+					<Grid item sx={{ m: "auto" }}>
 						<img src={RecycledLogoText} alt="recycled logo" className="banner-logo-mobile" />
 					</Grid>
 				</Grid>
