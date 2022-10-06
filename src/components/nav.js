@@ -25,6 +25,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link
+					component={RouterLink}
 					to="/"
 					sx={{
 						mt: 1,
@@ -38,8 +39,8 @@ const Nav = () => {
 		{
 			icon: (
 				<Link
+					component={RouterLink}
 					to="/team"
-					rel="noreferrer"
 					sx={{
 						mt: 1,
 					}}
