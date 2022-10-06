@@ -54,6 +54,7 @@ function App() {
 							<Route path="/team" element={<Team />} />
 						</Routes>
 					</Router>
+					{/* TODO: ADD FOOTER WITH LINKS AND CREDITS */}
 				</div>
 			</ThemeProvider>
 		</>

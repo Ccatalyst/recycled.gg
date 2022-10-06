@@ -22,7 +22,6 @@ const Nav = () => {
 	};
 	// Sets the links in the mobile version of the navigation bar
 	const actions = [
-		// Find icons for each of the in-site pages, change main speeddial button to home.
 		{
 			icon: (
 				<Link
@@ -248,7 +247,7 @@ const Nav = () => {
 						</ClickAwayListener>
 					</Grid>
 					<Grid item xs={6} sm="auto">
-						<Tooltip title="Not yet implemented" arrow>
+						<Tooltip title="Work in Progress!" arrow>
 							<span>
 								<Link component={RouterLink} to="/team" underline="none">
 									<Button value="Team" name="Team">
