@@ -38,7 +38,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link
-					href="/team"
+					to="/team"
 					rel="noreferrer"
 					sx={{
 						mt: 1,
