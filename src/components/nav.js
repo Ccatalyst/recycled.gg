@@ -7,6 +7,8 @@ import RIOLogo from "../assets/pictures/raiderio-white.svg";
 import WCLLogo from "../assets/pictures/wcl-logo.png";
 import WOWLogo from "../assets/pictures/wowlogo-white.png";
 import { HistoryEdu, Home, Groups2, ContactPage } from "@mui/icons-material/";
+// eslint-disable-next-line
+import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 
 const Nav = () => {
 	const [open, setOpen] = React.useState(false);
@@ -24,8 +26,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link
-					href="/"
-					rel="noreferrer"
+					to="/"
 					sx={{
 						mt: 1,
 					}}
@@ -135,7 +136,9 @@ const Nav = () => {
 	return (
 		<>
 			{/* If the screen size is mobile, it will change the Navigation bar from a "bar" to a SpeedDial, where the button will be fixed to the bottom right of the window. If it isn't mobile, it'll show the normal navigation bar */}
+
 			{mobile ? (
+				// This is the mobile navigation
 				<Box>
 					<SpeedDial
 						size="small"
@@ -160,6 +163,7 @@ const Nav = () => {
 					</SpeedDial>
 				</Box>
 			) : (
+				// This is the non-mobile nav bar
 				<Grid
 					container
 					maxWidth="xl"
@@ -175,9 +179,11 @@ const Nav = () => {
 					<Grid item xs={6} sm="auto" flex>
 						<Tooltip title="Home" arrow>
 							<span>
-								<Button size="fill" value="Home" name="Home">
-									Home
-								</Button>
+								<Link component={RouterLink} to="/" underline="none">
+									<Button value="Home" name="Home">
+										Home
+									</Button>
+								</Link>
 							</span>
 						</Tooltip>
 					</Grid>
@@ -244,9 +250,11 @@ const Nav = () => {
 					<Grid item xs={6} sm="auto">
 						<Tooltip title="Not yet implemented" arrow>
 							<span>
-								<Button size="large" value="The Team" name="Team" disabled>
-									Team
-								</Button>
+								<Link component={RouterLink} to="/team" underline="none">
+									<Button value="Team" name="Team">
+										Team
+									</Button>
+								</Link>
 							</span>
 						</Tooltip>
 					</Grid>
