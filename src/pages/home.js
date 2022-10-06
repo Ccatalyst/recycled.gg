@@ -10,7 +10,6 @@ const Home = () => {
 			container
 			columns={{ xs: 10 }}
 			sx={{
-				justifyContent: "center",
 				margin: "auto",
 			}}
 		>

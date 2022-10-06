@@ -17,6 +17,16 @@ const darkTheme = createTheme({
 			main: "#ffb74d",
 		},
 	},
+	// I need to sort out what is going to be a good set of breakpoints for this site. The defaults for Material UI are weird. This is an attempt at rushing through it, but I need to ensure that I'm using industry standards. TODO: Find the industry standards of responsive design and alter breakpoints based on that. Already built components will need to be checked for proper display when this is done.
+	// breakpoints: {
+	// 	values: {
+	// 		xs: 0,
+	// 		sm: 480,
+	// 		md: 768,
+	// 		lg: 1200,
+	// 		xl: 1536,
+	// 	},
+	// },
 });
 
 function Router(props) {
