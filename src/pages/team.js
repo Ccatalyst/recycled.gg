@@ -33,10 +33,58 @@ const Team = () => {
 			<Grid item xs={6} sm={3} lg={2}>
 				<PlayerCard />
 			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
 			<Grid item xs={12} sx={{ mb: 2 }}>
 				<Typography variant="h4" sx={{ textDecoration: "underline" }}>
 					Raiders
 				</Typography>
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
+			</Grid>
+			<Grid item xs={6} sm={3} lg={2}>
+				<PlayerCard />
 			</Grid>
 			<Grid item xs={6} sm={3} lg={2}>
 				<PlayerCard />

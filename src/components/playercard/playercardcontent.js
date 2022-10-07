@@ -25,8 +25,7 @@ const CardContent = () => {
 			<Grid item xs={12}>
 				{/* Setting a hard size on the container for each breakpoint will be a good idea. Typography noWrap is boolean, so even though the container has depth, it's not using it due to the element being block.  */}
 				<Typography noWrap variant="body2">
-					this content will be where a brief summary of the player and their skills will go. It might just include their class/spec, depending on the
-					final result of the card layout and design
+					very small blurb/nickname
 				</Typography>
 			</Grid>
 		</Grid>
